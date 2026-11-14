@@ -1627,7 +1627,7 @@ const APPROX_AREA_ZOOM = 9;
 const GEO_QUICK_BOOT_MS = 1500;
 // CARTO basemap keys are client-side by design and restricted to the live
 // site's referrer, so localhost requests go keyless (raster tiles watermark).
-const CARTO_KEY = "cb1_3umv_1_aa4684ea4fce195778be2673";
+const CARTO_KEY = "";
 const VECTOR_STYLE_URL = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
 const DEFAULT_BROWSE_LAT = 51.5074;
 const DEFAULT_BROWSE_LNG = -0.1278;
