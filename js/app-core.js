@@ -68,7 +68,7 @@ if (!airlineName || !angleDiffDeg || !bearingDegrees || !buildViewPolicy || !bui
   throw new Error("Contrails core helpers failed to load.");
 }
 
-const APP_VERSION = "2.43";
+const APP_VERSION = "2.44";
 const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
 const isIOSDevice = /iP(ad|hone|od)/.test(navigator.userAgent) ||
   (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
@@ -489,6 +489,6 @@ function restoreFocusIfConnected(el) {
 }
 
 function withCartoKey(url) {
-  if (isLocal || url.indexOf("key=") !== -1) return url;
+  if (isLocal || !CARTO_KEY || url.indexOf("key=") !== -1) return url;
   return url + (url.indexOf("?") === -1 ? "?" : "&") + "key=" + CARTO_KEY;
 }
